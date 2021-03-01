@@ -19,22 +19,22 @@ npm install
 ## Install & Run All tests
 `npm i`
 
-`npm start`
+`npm test`
 
 ## Only run specific Kata unit test
-`npm start <name of test>` (per describe block)
+`npm test <name of test>` (per describe block)
 
 
-ie: `npm start example`
+ie: `npm test example`
 
 ## Watch a specific Kata unit test
 
-`npm run watch <name of test>`
+`npm run test:watch <name of test>`
 
 
-ie: `npm run watch example`
+ie: `npm run test:watch example`
 
 
 ## Watch All tests
 
-`npm run watch-all`
+`npm run test:watch-all`

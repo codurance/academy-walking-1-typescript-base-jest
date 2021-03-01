@@ -6,8 +6,8 @@
   "types": "./build/index.d.ts",
   "scripts": {
     "test": "jest --",
-    "watch": "jest --watch --",
-    "watch-all": "jest --watchAll"
+    "test:watch": "jest --watch --",
+    "test:watch-all": "jest --watchAll"
   },
   "dependencies": {
     "@types/node": "^14.14.31",
