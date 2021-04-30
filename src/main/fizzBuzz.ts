@@ -1,9 +1,16 @@
 export const fizzBuzz = (number: number): string => {
-  if (number % 3 === 0 && number % 5 === 0) return "FizzBuzz";
+  const isMultipleOf3 = isMultipleOf(3, number);
+  const isMultipleOf5 = isMultipleOf(5, number);
 
-  if (number % 3 === 0) return "Fizz";
+  if (isMultipleOf3 && isMultipleOf5) return "FizzBuzz";
 
-  if (number % 5 === 0) return "Buzz";
+  if (isMultipleOf3) return "Fizz";
+
+  if (isMultipleOf5) return "Buzz";
 
   return number.toString();
+};
+
+const isMultipleOf = (divisor: number, inputNumber: number): boolean => {
+  return inputNumber % divisor === 0;
 };
