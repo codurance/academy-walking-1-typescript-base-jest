@@ -1,3 +1,7 @@
 export const sum = (number: string): number => {
-  return 0;
+  if (number === "") {
+    return 0;
+  } else {
+    return 1;
+  }
 };

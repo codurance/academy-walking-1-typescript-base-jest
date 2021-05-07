@@ -7,4 +7,8 @@ describe("String Calculator", () => {
   it("should return 1 if given string is 1", () => {
     expect(sum("1")).toBe(1);
   });
+
+  it("should return 3 if given string is 3", () => {
+    expect(sum("3")).toBe(3);
+  });
 });
