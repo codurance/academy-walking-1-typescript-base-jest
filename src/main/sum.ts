@@ -1,3 +1,3 @@
-export const sum = (number: string) => {
-  console.log("random", number);
+export const sum = (number: string): number => {
+  return 0;
 };
