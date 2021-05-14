@@ -4,11 +4,41 @@ describe("String Calculator", () => {
     expect(sum("")).toBe(0);
   });
 
-  it("should return 1 if given string is 1", () => {
-    expect(sum("1")).toBe(1);
+  it.each(["1", "3", "4"])(
+    "should return number if passed a string",
+    (input) => {
+      expect(sum(input)).toBe(parseInt(input));
+    }
+  );
+
+  it.each([
+    ["1,2", 3],
+    ["2,2", 4],
+    ["2,3", 5],
+  ])("should return the sum of 2 numbers", (input, output) => {
+    expect(sum(input)).toBe(output);
   });
 
-  it("should return 3 if given string is 3", () => {
-    expect(sum("3")).toBe(3);
+  it.each([
+    ["1,2,3", 6],
+    ["1,2,3,4", 10],
+    ["1,2,3,4,5", 15],
+  ])("should return the sum of multiple numbers", (input, output) => {
+    expect(sum(input)).toBe(output);
+  });
+
+  it.each([
+    ["1\n2,3", 6],
+    ["1\n2\n3", 6],
+    ["1\n2\n3,4", 10],
+  ])(
+    "should return a sum of multiple numbers shaperated by new lines and commas",
+    (input, output) => {
+      expect(sum(input)).toBe(output);
+    }
+  );
+
+  it("should return a sum of multiple numbers with the ; delimiter", () => {
+    expect(sum("//;\n1;2")).toBe(3);
   });
 });
