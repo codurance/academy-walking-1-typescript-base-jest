@@ -1,4 +1,3 @@
-jest.setTimeout(300000);
 
 function fib(a: number): number {
     return 0;
