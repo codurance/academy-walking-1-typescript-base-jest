@@ -1,13 +1,16 @@
+import {Example} from "../main/example"
 
-function fib(a: number): number {
-    return 0;
-}
 
 describe('example test', () => {
-    it("should return 0 when given 0 ", () => {
-        expect(fib(0)).toBe(0);
+    const generator = new Example();
+    it.each([[0,0],
+        [1,1],
+        [2,1],
+        [3,2]
+    ])
+    ('For index %d return %d', (index,returnValue) => {
+        expect(generator.fib(index)).toBe(returnValue);
     })
-
 })
 
 
