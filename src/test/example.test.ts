@@ -4,7 +4,7 @@ function fib(a: number): number {
 }
 
 describe('example test', () => {
-    it("should return 0 when given 0 ", (int) => {
+    it("should return 0 when given 0 ", () => {
         expect(fib(0)).toBe(0);
     })
 
