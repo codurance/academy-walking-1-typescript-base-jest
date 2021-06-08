@@ -10,7 +10,8 @@ describe('example test', () => {
         [4, 3],
         [5, 5],
         [6, 8],
-        [7, 13]
+        [7, 13],
+        [8, 21]
     ])
     ('For index %d return %d', (index, returnValue) => {
         expect(generator.fib(index)).toBe(returnValue);
