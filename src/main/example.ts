@@ -1,5 +1,5 @@
 export class Example {
-    fab(a: number) {
+    fib(a: number) {
         return 0;
     }
 }
