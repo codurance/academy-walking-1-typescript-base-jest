@@ -1,7 +1,8 @@
-
-// import { fib }
-
 jest.setTimeout(300000);
+
+function fib(a: number): number {
+    return 0;
+}
 
 describe('example test', () => {
     it("should return 0 when given 0 ", (int) => {
