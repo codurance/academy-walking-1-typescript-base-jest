@@ -1,5 +1,5 @@
-export class Example {
-    add(a: number, b: number) {
-        return a + b;
-    }
-}
+// export class Example {
+//     fib(a: number) {
+//         return 0;
+//     }
+// }
